@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>João Vitor Cim - Portfólio</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"/>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const toggle = document.getElementById("toggle-theme");
+      const html = document.documentElement;
+      const stored = localStorage.getItem("theme");
+      if (stored === "light") {
+        html.classList.add("light");
+        html.classList.remove("dark");
+      }
+      toggle.addEventListener("click", () => {
+        html.classList.toggle("light");
+        html.classList.toggle("dark");
+        localStorage.setItem("theme", html.classList.contains("light") ? "light" : "dark");
+      });
+    });
+  </script>
+  <style>
+    .fade-in {
+      animation: fadeIn 1.5s ease-in forwards;
+    }
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    html.light {
+      background-color: #f9fafb;
+      color: #111827;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-b from-gray-900 to-gray-800 text-white font-sans">
+
+  <header class="flex flex-wrap justify-between items-center px-6 py-4 border-b border-gray-700 sticky top-0 bg-gray-900 z-50">
+    <div class="text-xl font-bold">João Vitor Cim</div>
+    <nav class="space-x-4 text-sm flex items-center">
+      <a href="#sobre" class="hover:underline">Sobre</a>
+      <a href="#projetos" class="hover:underline">Projetos</a>
+      <a href="#certificados" class="hover:underline">Certificados</a>
+      <a href="#contato" class="hover:underline">Contato</a>
+      <button id="toggle-theme" class="ml-4 bg-gray-700 px-2 py-1 rounded text-xs">🌙</button>
+    </nav>
+  </header>
+
+  <section class="text-center py-20 fade-in px-4" id="sobre">
+    <img src="123222205.jpeg" alt="João Vitor Cim" class="w-32 h-32 mx-auto rounded-full mb-6 shadow-lg">
+    <h1 class="text-4xl font-bold">Olá, eu sou o João Vitor 👋</h1>
+    <p class="text-gray-400 mt-4 text-lg max-w-xl mx-auto">
+      Desenvolvedor Web em formação, apaixonado por tecnologia, interfaces intuitivas e soluções práticas. Atualmente focado em projetos que combinam design, usabilidade e código limpo.
+    </p>
+    <div class="flex flex-wrap justify-center gap-2 mt-6">
+      <span class="bg-blue-700 text-white px-3 py-1 rounded-full text-sm">HTML</span>
+      <span class="bg-green-600 text-white px-3 py-1 rounded-full text-sm">CSS</span>
+      <span class="bg-yellow-500 text-white px-3 py-1 rounded-full text-sm">JavaScript</span>
+      <span class="bg-purple-600 text-white px-3 py-1 rounded-full text-sm">Tailwind</span>
+    </div>
+  </section>
+
+  <<section id="projetos" class="px-6 py-12 fade-in">
+    <h2 class="text-2xl font-bold mb-8 text-center">Meus Projetos</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="bg-gray-800 rounded-lg p-6 shadow hover:scale-105 transition-transform">
+        <h3 class="text-lg font-semibold">Calculadora de IMC</h3>
+        <p class="text-sm text-gray-400 my-2">Calculadora com histórico, modo escuro e gráfico de evolução.</p>
+        <div class="flex space-x-3">
+          <a href="https://jvcim.github.io/Calculadora-IMC/" target="_blank" class="bg-blue-600 px-4 py-1 rounded">Ver</a>
+          <a href="https://github.com/jvcim/Calculadora-IMC" target="_blank" class="border border-blue-600 px-4 py-1 rounded">Código</a>
+        </div>
+      </div>
+      <div class="bg-gray-800 rounded-lg p-6 shadow hover:scale-105 transition-transform">
+        <h3 class="text-lg font-semibold">Conversor de Moedas</h3>
+        <p class="text-sm text-gray-400 my-2">Conversão de moedas com estilo moderno.</p>
+        <div class="flex space-x-3">
+          <a href="https://jvcim.github.io/Convert-template/" target="_blank" class="bg-blue-600 px-4 py-1 rounded">Ver</a>
+          <a href="https://github.com/jvcim/Convert-template" target="_blank" class="border border-blue-600 px-4 py-1 rounded">Código</a>
+        </div>
+      </div>
+      <div class="bg-gray-800 rounded-lg p-6 shadow hover:scale-105 transition-transform">
+        <h3 class="text-lg font-semibold">Lista de Compras</h3>
+        <p class="text-sm text-gray-400 my-2">Aplicação para organização de itens de mercado.</p>
+        <div class="flex space-x-3">
+          <a href="https://jvcim.github.io/Lista-de-compras/" target="_blank" class="bg-blue-600 px-4 py-1 rounded">Ver</a>
+          <a href="https://github.com/jvcim/Lista-de-compras" target="_blank" class="border border-blue-600 px-4 py-1 rounded">Código</a>
+        </div>
+      </div>
+      <div class="bg-gray-800 rounded-lg p-6 shadow hover:scale-105 transition-transform">
+        <h3 class="text-lg font-semibold">Mentalista</h3>
+        <p class="text-sm text-gray-400 my-2">Jogo de adivinhação com JavaScript.</p>
+        <div class="flex space-x-3">
+          <a href="https://jvcim.github.io/Mentalista-Adivinhe-o-numero/" target="_blank" class="bg-blue-600 px-4 py-1 rounded">Ver</a>
+          <a href="https://github.com/jvcim/Mentalista-Adivinhe-o-numero" target="_blank" class="border border-blue-600 px-4 py-1 rounded">Código</a>
+        </div>
+      </div>
+      <div class="bg-gray-800 rounded-lg p-6 shadow hover:scale-105 transition-transform">
+        <h3 class="text-lg font-semibold">Relógio Mundial</h3>
+        <p class="text-sm text-gray-400 my-2">Relógio com fusos horários globais.</p>
+        <div class="flex space-x-3">
+          <a href="https://jvcim.github.io/Rel-gio-mundial/" target="_blank" class="bg-blue-600 px-4 py-1 rounded">Ver</a>
+          <a href="https://github.com/jvcim/Rel-gio-mundial" target="_blank" class="border border-blue-600 px-4 py-1 rounded">Código</a>
+        </div>
+      </div>
+      <div class="bg-gray-800 rounded-lg p-6 shadow hover:scale-105 transition-transform">
+        <h3 class="text-lg font-semibold">NLW Setup</h3>
+        <p class="text-sm text-gray-400 my-2">Aplicação para gerenciamento de hábitos diários.</p>
+        <div class="flex space-x-3">
+          <a href="https://jvcim.github.io/nlw-setup" target="_blank" class="bg-blue-600 px-4 py-1 rounded">Ver</a>
+          <a href="https://github.com/jvcim/nlw-setup" target="_blank" class="border border-blue-600 px-4 py-1 rounded">Código</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="certificados" class="px-6 py-12 fade-in">
+    <h2 class="text-2xl font-bold mb-8 text-center">Certificados</h2>
+    <p class="text-center text-gray-400 max-w-2xl mx-auto">
+      Abaixo estão alguns certificados que obtive durante minha formação:
+    </p>
+    <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <div class="bg-gray-800 rounded-lg p-4 shadow">
+        <h3 class="text-lg font-semibold">Trilha Conectar - Discover</h3>
+        <p class="text-sm text-gray-400">Fundamentos da programação, internet, hardware e software - 2h23.</p>
+        <a href="https://app.rocketseat.com.br/certificates/4a2b98b3-3ba5-48fc-8e07-ab297c99717e" target="_blank" class="text-blue-400 text-sm underline">Ver certificado</a>
+      </div>
+      <div class="bg-gray-800 rounded-lg p-4 shadow">
+        <h3 class="text-lg font-semibold">HTML e CSS - Rocketseat</h3>
+        <p class="text-sm text-gray-400">Fundamentos da web com foco em boas práticas e semântica.</p>
+        <a href="https://app.rocketseat.com.br/certificates/4e15e4b3-a031-4491-a72a-5b4351d04010" target="_blank" class="text-blue-400 text-sm underline">Ver certificado</a>
+      </div>
+      <div class="bg-gray-800 rounded-lg p-4 shadow">
+        <h3 class="text-lg font-semibold">JavaScript Intermediário (em andamento)</h3>
+        <p class="text-sm text-gray-400">Manipulação de DOM, eventos, funções e lógica aplicada.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato" class="bg-gray-900 px-6 py-16 border-t border-gray-700 fade-in">
+    <h2 class="text-2xl font-bold mb-6 text-center">Entre em Contato</h2>
+    <div class="flex flex-wrap justify-center space-x-8 text-2xl">
+      <a href="mailto:jvcim.pavel@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+      <a href="https://github.com/jvcim" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/jvcim/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://www.instagram.com/joaovitorcim/" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
+  </section>
+  
+  <footer class="text-center py-6 text-gray-500 text-sm fade-in">
+    © 2025 João Vitor Cim. Todos os direitos reservados.
+  </footer>
+</body>
+</html>
